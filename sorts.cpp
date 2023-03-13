@@ -258,13 +258,13 @@ int main()
             auto duration = duration_cast<microseconds>(stop - start);
             output[i] += to_string(duration.count()) + " ";
 
-            //output_file << "HeapSort: "; 
+            output_file << "HeapSort: "; 
             for (int j = 0; j < 1000000; j++)
             {
-                //output_file << numbers[i][j] << " ";
+                output_file << numbers[i][j] << " ";
                 numbers[i][j] = original_numbers[i][j];
             }
-            //output_file << endl;
+            output_file << endl;
 
             start = high_resolution_clock::now();
             quickSortDesc(numbers[i], 0, 999999);
@@ -272,13 +272,13 @@ int main()
             duration = duration_cast<microseconds>(stop - start);
             output[i] += to_string(duration.count()) + " ";
 
-            //output_file << "quickSortDesc: "; 
+            output_file << "quickSortDesc: "; 
             for (int j = 0; j < 1000000; j++)
             {
-                //output_file << numbers[i][j] << " ";
+                output_file << numbers[i][j] << " ";
                 numbers[i][j] = original_numbers[i][j];
             }
-            //output_file << endl;
+            output_file << endl;
 
             start = high_resolution_clock::now();
             mergeSortDesc(numbers[i], 0, 999999);
@@ -286,13 +286,13 @@ int main()
             duration = duration_cast<microseconds>(stop - start);
             output[i] += to_string(duration.count()) + " ";
 
-            //output_file << "MergeSort: "; 
+            output_file << "MergeSort: "; 
             for (int j = 0; j < 1000000; j++)
             {
-                //output_file << numbers[i][j] << " ";
+                output_file << numbers[i][j] << " ";
                 numbers[i][j] = original_numbers[i][j];
             }
-            //output_file << endl;
+            output_file << endl;
 
             start = high_resolution_clock::now();
             sort(numbers[i].begin(), numbers[i].end(), greater<float>());
@@ -300,13 +300,13 @@ int main()
             duration = duration_cast<microseconds>(stop - start);
             output[i] += to_string(duration.count());
 
-            //output_file << "Built-inSort: "; 
+            output_file << "Built-inSort: "; 
              for (int j = 0; j < 1000000; j++)
             {
-                //output_file << numbers[i][j] << " ";
+                output_file << numbers[i][j] << " ";
                 numbers[i][j] = original_numbers[i][j];
             }
-            //output_file << endl;
+            output_file << endl;
         }
         else {
             // sort in ascending order
@@ -316,13 +316,13 @@ int main()
             auto duration = duration_cast<microseconds>(stop - start);
             output[i] += to_string(duration.count()) + " ";
 
-            //output_file << "HeapSort: "; 
+            output_file << "HeapSort: "; 
             for (int j = 0; j < 1000000; j++)
             {
-                //output_file << numbers[i][j] << " ";
+                output_file << numbers[i][j] << " ";
                 numbers[i][j] = original_numbers[i][j];
             }
-            //output_file << endl;
+            output_file << endl;
 
             start = high_resolution_clock::now();
             quickSortAsc(numbers[i], 0, 999999);
@@ -330,13 +330,13 @@ int main()
             duration = duration_cast<microseconds>(stop - start);
             output[i] += to_string(duration.count()) + " ";
 
-            //output_file << "quickSortDesc: "; 
+            output_file << "quickSortDesc: "; 
             for (int j = 0; j < 1000000; j++)
             {
-                //output_file << numbers[i][j] << " ";
+                output_file << numbers[i][j] << " ";
                 numbers[i][j] = original_numbers[i][j];
             }
-            //output_file << endl;
+            output_file << endl;
 
             start = high_resolution_clock::now();
             mergeSortAsc(numbers[i], 0, 999999);
@@ -344,13 +344,13 @@ int main()
             duration = duration_cast<microseconds>(stop - start);
             output[i] += to_string(duration.count()) + " ";
 
-            //output_file << "MergeSort: "; 
+            output_file << "MergeSort: "; 
             for (int j = 0; j < 1000000; j++)
             {
-                //output_file << numbers[i][j] << " ";
+                output_file << numbers[i][j] << " ";
                 numbers[i][j] = original_numbers[i][j];
             }
-            //output_file << endl;
+            output_file << endl;
 
             start = high_resolution_clock::now();
             sort(numbers[i].begin(), numbers[i].end());
@@ -358,13 +358,13 @@ int main()
             duration = duration_cast<microseconds>(stop - start);
             output[i] += to_string(duration.count());
 
-            //output_file << "Built-inSort: "; 
+            output_file << "Built-inSort: "; 
              for (int j = 0; j < 1000000; j++)
             {
-                //output_file << numbers[i][j] << " ";
+                output_file << numbers[i][j] << " ";
                 numbers[i][j] = original_numbers[i][j];
             }
-            //output_file << endl;
+            output_file << endl;
 
         }
     }
